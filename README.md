@@ -8,22 +8,21 @@ die Änderungen als Ereignis aufgebildet und aufgezeichnet werden.
 ```csharp
 public interface IBenutzerAnmeldungService
 {
-	void BenutzerRegistrieren(string benutzername, string vorname, string passwort);
+	void BenutzerRegistrieren(string benutzername, string vorname, string nachname, string passwort);
 	bool DarfBenutzerAnmelden(string benutzername, string passwort);
 }
 ```
 
-In welcher Form und wo diese Ereignisse gespeichert werden, kannst du selber entscheiden.
+In welcher Form und wo diese Ereignisse gespeichert werden sollen, kannst du selber entscheiden.
 
 Diese sind zu beachten:
-1) Es darf keine relationale Datenbank als Speichermedium genutzt werden.
-2) Die Ereignisse werden in vergangenheit formuliert.
-3) Es darf noch keine Geschäftsregeln implementiert werden.
-4) Ausnahmsweise dürfen die Passwörter als Plaintext gespeichert und geschickt werden.
-5) Unit-Tests müssen geschrieben werden. Du kannst dir selber entscheiden, ob Test-first oder Test-nach.
+	Es darf keine relationale Datenbank als Speichermedium genutzt werden.
+	Die Ereignisse werden in Vergangenheit formuliert.
+	Plausibilitätsprüfungen dürfen ignoriert werden.
+	Ausnahmsweise dürfen die Passwörter als Plaintext gespeichert und geschickt werden.
+	Unit-Tests müssen geschrieben werden. Du kannst dir selber entscheiden, ob Test-first oder Test-nach.
 
-Ziel der Übung A: 
-Eine andere Sichtweise beim Entwickeln einer Lösung einnehmen.
+Ziel der Übung A: Eine andere Sichtweise beim Entwickeln einer Lösung einnehmen.
 
 ## Übung B: 
 Erweitere die Schnittstelle mit einer PasswortAendern Methode.
