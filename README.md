@@ -34,8 +34,8 @@ public interface IBenutzerAnmeldungService
 	void PasswortAendern(string benutzername, string altesPasswort, string neuesPasswort);
 }
 ```
-Diese sind zu beachten:
 
+Diese sind zu beachten:
 	Das neue Passwort darf nicht weniger als 6 Zeichen beinhalten.
 	Unit-Tests müssen geschrieben werden. Du kannst dir selber entscheiden, ob Test-first oder Test-nach.
 
