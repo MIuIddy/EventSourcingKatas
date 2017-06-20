@@ -25,7 +25,21 @@ Diese sind zu beachten:
 Ziel der Übung A: Eine andere Sichtweise beim Entwickeln einer Lösung einnehmen.
 
 ## Übung B: 
-Erweitere die Schnittstelle mit einer PasswortAendern Methode.
+Erweitere bitte die Schnittstelle, damit der Benutzer sein Passwort ändern kann.
+```csharp
+public interface IBenutzerAnmeldungService
+{
+	void BenutzerRegistrieren(string benutzername, string vorname, string nachname, string passwort);
+	bool DarfBenutzerAnmelden(string benutzername, string passwort);
+	void PasswortAendern(string benutzername, string altesPasswort, string neuesPasswort);
+}
+```
+Diese sind zu beachten:
+
+	Das neue Passwort darf nicht weniger als 6 Zeichen beinhalten.
+	Unit-Tests müssen geschrieben werden. Du kannst dir selber entscheiden, ob Test-first oder Test-nach.
+
+Ziel der Übung B: Events filtern, die über gleiche DomainObjekte bzw. Aggregaten operieren. Das Aggregate-Konzept verstehen. Ein Gefühl für Platzieren von Business Regeln bekommen.
 
 ## Übung C: 
 Implementiere eine andere Komponente, die Mails an Administrator schickt wenn ein neuer Benutzer registriert wurde.
