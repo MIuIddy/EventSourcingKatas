@@ -40,7 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BenutzerAnmeldungService.cs" />
+    <Compile Include="BenutzerWurdeRegistriert.cs" />
+    <Compile Include="Event.cs" />
+    <Compile Include="EventSpeicher.cs" />
     <Compile Include="IBenutzerAnmeldungService.cs" />
+    <Compile Include="IEventSpeicher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
